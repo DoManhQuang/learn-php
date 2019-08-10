@@ -1,0 +1,138 @@
+## TỔNG QUAN VỀ LẬP TRÌNH PHP 
+
+
+PHP_EOL : xuống dòng.
+
+$a = "b"
+$$a = 5 // $$a = $b
+echo $b
+Output = 5
+
+toán tử "." dùng để nối chuỗi
+
+Khai báo hằng số sử dụng mọi vị trí:
+define("A", "Gia tri A")
+echo A;
+Output : Gia tri A
+
+
+Biến toàn cục :
+
+<?php
+$a = 4
+
+function test(){ 
+	global $a; // yêu cầu sử dụng biến toàn cục $a
+	echo $a;
+}
+
+test();
+?>
+
+Lưu ý :
+$s = 10%-3 => output : 1 // :v phép chia lấy dư không lấy dấu ở mẫu.
+
+Toán tử :
+<?php 
+$a = true;
+$b = false;
+
+$c = $a || $b => output $c = 1 (true)
+
+$a = "Hello";
+$b = false;
+
+$c = $a or $b => output $c = "hello"// Độ ưu tiên "=" hơn "or"
+	
+?>
+
+N = ai ... an
+	 G
+K : XM ai
+	j=1
+
+G : số cho trước
+
+
+## SECSION VÀ COOKIE
+
+# Cookie
+
+Lưu trữ ở phía máy người dùng.
+Có thể thay đổi trực tiếp trên trình duyệt
+Cookie sẽ mất khi hết thời gian được truyền vào, khi tắt trình duyệt mà thời gian chưa hết
+Cookie vẫn không bị mất
+
+# Secsion 
+
+Lưu trữ phía sever
+Khi tắt trình duyệt thì Secsion sẽ mất
+
+
+## Arrays :
+
+Syntax :
+$arr = array(10,'abc',20)
+$arr = [0 => 10,...]
+$arr = [1,10,20,3]
+
+$a = explode(',', '1,20,30')
+=> output : [1,20,30]
+
+implode(' ', ['hello','world'])
+=> output : hello world
+
+$a = ['a', 'b', '1']
+$b = ['a', 'b', 1]
+$c = ['1', 'b', 'a']
+$d = [2 => 1, 0 => 'a', 1 => 'b']
+
+var_dump($a==$b) => true
+var_dump($a===$b) => false
+var_dump($a==$c) => false
+var_dump($a==$d) => true
+var_dump($a===$d) => false
+
+
+## Form và các điều khiển cơ sở
+
+Tìm hiểu về Ajax và JS
+
+n = 6
+[
+	A1 = 5,
+	A2 = A1 5 * B1 +,
+	B1 = A3 C1 * B2 +,
+	A3 = 2
+	B2 = 1
+	C1 = B2 A1 6 * + 5 3 / - 7 +,
+]
+
+output : 
+A1 = 5
+A2 = 98,66
+A3 = 2
+B1 = 73,66
+B2 = 1
+C1 = 36,33
+
+_input = {
+    'a1': 5,
+    'a2' : 'a1 5 * b1 +',
+    'b1' : 'a3 c1 * b2 +',
+    'a3' : 2,
+    'b2' : 1,
+    'c1' : 'b2 a1 6 * + 5 3 / - 7 +',
+    }
+
+   x = [b2, a1, 6, *, +, 5, 3,/,-,7,+]
+
+   string = [1, 5, 6, *, +, 5, 3,/,-,7,+]
+   string = '1 5 6 * ...'
+
+## STRING 
+
+	tìm hiểu regex101.com
+	
+## OOP in PHP
+

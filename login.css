@@ -1,0 +1,23 @@
+td
+{
+	padding: 10px;
+	text-align: center;
+}
+
+.textbox{
+	height: 30px;
+	width: 200px;
+}
+#btnSubmit{
+	width: 70px;
+	height: 30px;
+}
+
+/*
+.btnQMK{
+	background-color: #FF6347;
+	width: 120px;
+	height: 30px;
+	color: 	#F0FFF0;
+}
+*/

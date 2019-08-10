@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<link rel="shortcut icon" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+	<h2 align="left">Đăng Nhập Hệ Thống</h2>
+	<table align="center">
+		<!-- <form method="POST" action="login.php"> -->
+			<tr>
+				<td colspan="2">
+					<img src="banner.png" width="500px" height="200px">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="username" name="username" required="required" placeholder="Tên đăng nhập"
+					maxlength="255" class="textbox">
+				</td>
+			</tr>
+			<tr>
+				<td>	
+					<input type="password" id="password" name="password"required="required" placeholder="Mật khẩu"
+					maxlength="255" class="textbox">
+				</td>
+			</tr>
+			<tr >
+				<td colspan="2" align="right">
+					<input type="button" name="btnSubmit" value="Đăng nhập" id="btnSubmit" style="color: 	#D3EDBA; background-color: #57CB33;">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="Loginfailed" 
+							style=" 
+								display: none;
+								color: red; 
+								text-align: center;">
+							Đăng Nhập Thất Bại!
+					</div>
+				</td>
+			</tr>
+		<!-- </form> -->
+	</table>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#btnSubmit").on("click", function(){
+		var username = $("#username").val();
+		var password = $("#password").val();
+		var Loginfailed = $(".Loginfailed");
+		$.ajax({
+		  url: "login.php",
+		  method: "POST",
+		  data: { username : username, password : password },
+		  success : function(response){
+		  	if (response == "false") {
+		  		Loginfailed.show();
+		  	}
+		  	else{
+		  		alert("Đăng Nhập Thành Công");
+		  	}
+		  }
+		});
+	});
+});
+	</script>
+</body>
+</html>
